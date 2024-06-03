@@ -1,3 +1,14 @@
+//Veri işlemleri
+function get(npc,v1){
+    var g=npc.getStoreddata().get(v1);
+    return g
+}
+    
+function set(npc,v1,v2){
+    npc.getStoreddata().put(v1,v2)
+}
+
+
 //NPC işlemleri
 function interact(e){
     /*Npc mesajı*/  e.npc.say("Merhaba!")
@@ -37,7 +48,9 @@ function interact(e){
     /*ev pozisyonu set */e.npc.setHome(xPos,yPos,zPos);
     /*NPC'nin sahibini döndürür (eğer varsa).*/e.npc.getOwner()
     /*Npc Sahibi Ayarla*/e.npc.setOwner(e.player);
-    
+
+    /*NPC zıplatma */e.npc.jump()
+
 }
 
 /*Dünya mesajı:"Merhaba dünya"*/
