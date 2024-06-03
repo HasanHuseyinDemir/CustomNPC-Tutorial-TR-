@@ -31,9 +31,13 @@ function interact(e){
     e.npc.addPotionEffect(new net.minecraft.potion.PotionEffect(net.minecraft.init.MobEffects.STRENGTH, 600, 1));
     
     /*iksir etkilerini kaldırma*/e.npc.clearPotionEffects()
-
-
     /*npc buna saldırsın */e.npc.setAttackTarget(e.player);
+
+    /*ev pozisyonu*/e.npc.getHome();
+    /*ev pozisyonu set */e.npc.setHome(xPos,yPos,zPos);
+    /*NPC'nin sahibini döndürür (eğer varsa).*/e.npc.getOwner()
+    /*Npc Sahibi Ayarla*/e.npc.setOwner(e.player);
+    
 }
 
 /*Dünya mesajı:"Merhaba dünya"*/
