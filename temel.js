@@ -18,6 +18,22 @@ function interact(e){
     /*NPC Pozisyonu*/e.npc.setPosition(100, 64, 200);
     /*npc yi yok eder*/e.npc.despawn();
     /*npc canlımı*/e.npc.isAlive();
+
+    /*NPCnin item vermesi */
+    var item = e.npc.world.createItem("minecraft:diamond", 0, 1);
+    e.npc.giveItem(e.player, item);
+
+    /*Npc Ateşe Dayanıklımı?*/e.npc.setImmuneToFire(true);
+    /*Npc yansınmı? */
+
+    e.npc.addPotionEffect(effect)//NPC'ye belirli bir iksir etkisi ekler.
+    //Örnek Kullanım
+    e.npc.addPotionEffect(new net.minecraft.potion.PotionEffect(net.minecraft.init.MobEffects.STRENGTH, 600, 1));
+    
+    /*iksir etkilerini kaldırma*/e.npc.clearPotionEffects()
+
+
+    /*npc buna saldırsın */e.npc.setAttackTarget(e.player);
 }
 
 /*Dünya mesajı:"Merhaba dünya"*/
